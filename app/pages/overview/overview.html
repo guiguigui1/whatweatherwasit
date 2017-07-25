@@ -1,0 +1,79 @@
+<div class="overview">
+    <div class="container">
+        <div class="row input-row">
+            <form name="graphInput">
+                <div class="col-xs-12 col-sm-6">
+                    <div class="inner-input-row">
+                        <md-input-container class="input-date">
+                            <label>Date</label>
+                            <md-datepicker ng-model="overview.date"
+                                           required
+                                           name="dateField"
+                                           md-min-date="overview.minDate"
+                                           md-max-date="overview.maxDate"
+                                           md-current-view="year"
+                                           md-hide-icons="calendar">
+                            </md-datepicker>
+                        </md-input-container>
+                        <md-input-container class="input-city">
+                            <label>City</label>
+                            <input ng-model="overview.city" name="cityField" required>
+                        </md-input-container>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6">
+                    <md-button type="submit" class="md-raised md-primary search-button"
+                               ng-click="overview.goToHistoryDay()">Get Weather
+                    </md-button>
+                </div>
+            </form>
+        </div>
+        <div class="row" ng-if="overview.showWeather">
+            <div class="col-xs-12">
+                <div class="row city-header">
+                    <div class="col-xs-12">
+                        <h2>{{overview.weatherData.request[0].query}}</h2>
+                        <h3>{{overview.formattedDate}}</h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6">
+                        <table class="table generic-info">
+                            <tbody>
+                            <tr>
+                                <th>Maximum temperature</th>
+                                <td>{{overview.weatherData.weather[0].maxtempC}} °C</td>
+                            </tr>
+                            <tr>
+                                <th>Minimum temperature</th>
+                                <td>{{overview.weatherData.weather[0].mintempC}} °C</td>
+                            </tr>
+                            <tr>
+                                <th>Hours of Sun</th>
+                                <td>{{overview.weatherData.weather[0].sunHour}}</td>
+                            </tr>
+                            <tr>
+                                <th>Total Precipitation</th>
+                                <td>{{overview.weatherData.weather[0].totalPrecipitation}} mm</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 graph-panel graphTemperature">
+                        <span>Temperature</span>
+                        <nvd3 options="overview.temperatureDay.options" data="overview.temperatureDay.data"></nvd3>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 graph-panel graphPrecipitation">
+                        <span>Precipitation</span>
+                        <nvd3 options="overview.precipitationDay.options" data="overview.precipitationDay.data"></nvd3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--<div class="graph">-->
+<!--<nvd3 options="overview.options2" data="overview.data2"></nvd3>-->
+<!--</div>-->

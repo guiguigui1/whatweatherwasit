@@ -1,0 +1,30 @@
+{
+  "name": "angular-requirejs-seed",
+  "description": "A starter project for AngularJS",
+  "version": "0.3.0",
+  "homepage": "https://github.com/tnajdek/angular-requirejs-seed",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "angular": "1.4.x",
+    "angular-bootstrap": "0.11.0",
+    "angular-aria": "1.5.8",
+    "angular-animate": "1.5.8",
+    "angular-messages": "1.5.8",
+    "angular-loader": "1.4.x",
+    "angular-mocks": "~1.4.x",
+    "bootstrap-sass-official": "3.2.0+1",
+    "requirejs-text": "2.0.x",
+    "requirejs": "2.1.x",
+    "angular-ui-router": "^0.3.1",
+    "ngmap": "^1.17.8",
+    "angular-nvd3": "^1.0.9",
+    "async": "^2.0.1",
+    "font-awesome": "^4.7.0",
+    "angular-cookies": "1.4.14",
+    "angular-material": "~1.1.0",
+    "moment": "^2.18.1",
+    "angular-moment": "^1.0.1",
+    "bootstrap": "^3.3.7"
+  }
+}

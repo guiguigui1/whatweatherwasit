@@ -1,0 +1,19 @@
+.header {
+  background-color: $aliceblue;
+  box-shadow: 0 1px 3px gray;
+  position: relative;
+  z-index: 1;
+  h1 {
+    font-size: 20px;
+    font-weight: 400;
+    a {
+      font-size: 20px;
+      font-weight: 400;
+    }
+  }
+  .inner-container {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+  }
+}

@@ -1,0 +1,45 @@
+$blue: #0CB0FF;
+$blue-lightest: #A6E2FF;
+$blue-light: #75D2FF;
+$blue-darker: #005C88;
+$blue-darkest: #004668;
+$green: #0cffd5;
+$white: #FFF;
+$background: $white;
+$aliceblue: #f0f8ff; //or just aliceblue
+
+$screen-xs-min: 480px;
+$screen-sm-min: 768px;
+$screen-md-min: 992px;
+$screen-lg-min: 1200px;
+$screen-xs-max: ($screen-sm-min - 1);
+$screen-sm-max: ($screen-md-min - 1);
+$screen-md-max: ($screen-lg-min - 1);
+
+h1,h2,h3,h4,h5,h6,a,p {
+  font-family: 'Roboto', sans-serif;
+  color: inherit;
+  text-decoration: none;
+}
+
+.md-primary {
+  vertical-align: top;
+  background-color: $blue !important;
+}
+
+button.md-datepicker-triangle-button.md-icon-button.md-button {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  transform: initial;
+  border-radius: 0;
+  &.md-focused {
+    background-color: transparent;
+  }
+  .md-datepicker-expand-triangle {
+    right: 0;
+    left: initial;
+  }
+}
+

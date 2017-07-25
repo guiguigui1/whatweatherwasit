@@ -1,0 +1,48 @@
+.overview {
+  background-color: $white;
+}
+
+.header-row {
+  padding-top: 20px;
+}
+.input-row {
+  padding: 24px 0 30px;
+  border-bottom: 1px solid gray;
+
+  .inner-input-row {
+    display: flex;
+    flex-direction: row;
+    .input-city {flex-grow:1}
+    md-input-container {margin: 18px 0 0}
+    .md-errors-spacer {display: none;}
+  }
+  .search-button {
+    width: 100%;
+    margin: 13px 0 0;
+  }
+}
+.city-header {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  h2, h3 {margin: 0}
+  h2 {font-size: 28px}
+  h3 {font-size: 16px}
+}
+table.generic-info{
+  th{
+    padding-left: 0 !important;
+  }
+}
+.graph-panel {
+  span {
+    display: inline-block;
+    margin-bottom: 8px;
+    font-weight: bold;
+  }
+}
+
+.getGraph {
+  @media (min-width: $screen-md-min){
+    margin-top: 12px;
+  }
+}
